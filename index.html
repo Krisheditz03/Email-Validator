@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validator</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Email Validator</h1>
+    
+    <div style="text-align: center;">
+        <label for="oe">Enter a Email Address :</label>
+        <input placeholder="krishpanwar08@gmail.com" style="border: 2px solid red; border-radius: 5px;" id="oe"><br><br>
+
+        <button style="border: 2px solid red; border-radius: 5px; background-color: yellow;" onclick="Validate()">Validate Email</button>
+
+        <p id="ans"></p>
+    </div>
+
+    <script>
+       
+       function Validate() {
+
+        var email = (document.getElementById("oe").value);
+        // var result = (document.getElementById("ans").value);
+
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; 
+        const isValid = emailPattern.test(email);
+
+        if(console == true){
+            "true"
+        } else{
+            "false"
+        }
+        document.getElementById("ans").innerHTML=isValid
+        console.log(isValid);
+
+        
+       
+    }
+        
+    </script>
+</body>
+</html>
